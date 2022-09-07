@@ -1,0 +1,14 @@
+CC=gcc
+
+%.o: %.c
+	$(CC) -c -o $@ $<
+
+supuesto: supuesto.o
+	gcc -o supuesto supuesto.o
+
+
+tar:
+	tar czvf c_language_basics.tgz *.c 
+	
+clean:
+	rm -f *.o supuesto
